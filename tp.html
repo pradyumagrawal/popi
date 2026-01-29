@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Cart</title>
+    <style>
+        body {
+            background-color: #0a192f; 
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .cart-card {
+            background: #112240; 
+            width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #233554;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #233554;
+            padding-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            background: #1d2d50;
+            margin-bottom: 12px;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .icon { font-size: 30px; margin-right: 15px; }
+        .info { flex-grow: 1; }
+
+        .name { display: block; font-weight: 500; margin-bottom: 4px; }
+
+        .wish-link {
+            color: #8892b0;
+            font-size: 11px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .wish-link:hover { color: #f08804; } 
+        .price { font-weight: bold; color: #f08804; }
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            border-top: 1px solid #233554;
+            padding-top: 20px;
+        }
+
+        .total-price {
+            display: block;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .order-btn {
+            background: #f08804;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .order-btn:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body>
+
+<div class="cart-card">
+    <h2>My Cart</h2>
+
+    <div id="cart-list">
+        <div class="item">
+            <div class="icon">📱</div>
+            <div class="info">
+                <span class="name">Smartphone Pro</span>
+                <span class="wish-link" onclick="remove(this)">Move to Wishlist</span>
+            </div>
+            <div class="price" data-val="74999">₹74,999</div>
+        </div>
+
+        <div class="item">
+            <div class="icon">🎧</div>
+            <div class="info">
+                <span class="name">Headphones</span>
+                <span class="wish-link" onclick="remove(this)">Move to Wishlist</span>
+            </div>
+            <div class="price" data-val="9990">₹9,990</div>
+        </div>
+
+        <div class="item">
+            <div class="icon">⌚</div>
+            <div class="info">
+                <span class="name">Smartwatch</span>
+                <span class="wish-link" onclick="remove(this)">Move to Wishlist</span>
+            </div>
+            <div class="price" data-val="4999">₹4,999</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span style="color: #8892b0; font-size: 14px;">Grand Total</span>
+        <span class="total-price">₹<span id="total-num">89988</span></span>
+        <button class="order-btn" id="buy-now">ORDER NOW</button>
+    </div>
+</div>
+
+<script>
+    function remove(element) {
+        element.closest('.item').remove();
+        
+        var allPrices = document.getElementsByClassName('price');
+        var sum = 0;
+
+        for (var i = 0; i < allPrices.length; i++) {
+            var val = allPrices[i].getAttribute('data-val');
+            sum = sum + parseInt(val);
+        }
+
+        document.getElementById('total-num').innerText = sum;
+
+        if (sum === 0) {
+            var btn = document.getElementById('buy-now');
+            btn.innerText = "CART EMPTY";
+            btn.style.background = "#233554";
+            btn.style.cursor = "default";
+        }
+    }
+</script>
+
+</body>
+</html>
