@@ -84,8 +84,7 @@ text1{
 .coding{
     background-image:linear-gradient(rgba(255, 255, 255, 0.5),
                     rgba(255, 255, 255, 0.5)), url(codingbg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     
     text-align: left;
     width: 70vw;
@@ -140,4 +139,8 @@ li{ margin-top: 40px;
     margin-top: 3vw;
     margin-left: 10vw;
     margin-right: 10vw;
+}
+.codingfooter{
+    position: absolute;
+    bottom: 0px;
 }
