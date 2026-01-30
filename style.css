@@ -25,17 +25,15 @@ a{
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    transition: font-size 0.3s ease, text-decoration-color 0.3s ease;
+    
 
 }
 
 a:hover{
-    font-size: 20px;
+    font-size: 21px;
     text-decoration: underline;
-    transition-duration: 0.3s;
-    transition-property: all;
-    transition-delay: 0.1s;
-    
-    
+
 }
 
 .content{
@@ -73,7 +71,12 @@ img{
     height: auto;
     margin-right: 40%;
     margin-left: 40%;
+    transition: transform 1s;
 
+}
+.pp:hover{
+    transform: scale(1.1);
+    transition-property: all;
 }
 text{
     font-weight: 200;
@@ -152,11 +155,9 @@ li{ margin-top: 40px;
 .socials{
     height:22px;
     width: 22px;
+    transition: height 0.3s ease, width 0.3s ease;
 }
 .socials:hover{
     height:27px;
-    width: 30px;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-delay: 0.1s;
+    width: 27px;
 }
