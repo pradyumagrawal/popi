@@ -131,7 +131,13 @@ li{ margin-top: 40px;
 }
 .sk{
     font-size: 30px;
-    
+    margin-top: 5vw;
+    margin-left: 10vw;
     font-weight: 800;
     
+}
+.incont{
+    margin-top: 3vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
