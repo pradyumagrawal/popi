@@ -31,8 +31,11 @@ a{
 a:hover{
     font-size: 20px;
     text-decoration: underline;
+    transition-duration: 0.3s;
+    
     
 }
+
 .content{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    
@@ -143,4 +146,13 @@ li{ margin-top: 40px;
 .codingfooter{
     position: absolute;
     bottom: 0px;
+}
+.socials{
+    height:22px;
+    width: 22px;
+}
+.socials:hover{
+    height:27px;
+    width: 30px;
+    transition-duration: 0.3s;
 }
