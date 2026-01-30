@@ -119,8 +119,19 @@ li{ margin-top: 40px;
     margin: 50px;
 }
 .INTEREST{
+    background-image: url(interest.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
      width: auto;width: 70vw;
      position:absolute;
     left:30vw;
+    margin: 6vw;
+    
+}
+.sk{
+    font-size: 30px;
+    
+    font-weight: 800;
+    
 }
