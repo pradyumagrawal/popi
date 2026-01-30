@@ -32,6 +32,8 @@ a:hover{
     font-size: 20px;
     text-decoration: underline;
     transition-duration: 0.3s;
+    transition-property: all;
+    transition-delay: 0.1s;
     
     
 }
@@ -154,5 +156,7 @@ li{ margin-top: 40px;
 .socials:hover{
     height:27px;
     width: 30px;
+    transition-property: all;
     transition-duration: 0.3s;
+    transition-delay: 0.1s;
 }
