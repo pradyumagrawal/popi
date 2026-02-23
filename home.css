@@ -138,6 +138,7 @@ img{
     }
     .bji{
         display: block !important;
+        margin-right: 30px;
         
     }
     #head{
