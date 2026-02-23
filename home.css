@@ -2,36 +2,42 @@
     padding: 0;
     margin: 0;
     color: #c7c7c7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 body{
     background-color: black;
 }
 #head{
-    height: 28px;
+    height: 48px;
+
     width: 100%;
-    position: fixed;
+    position: sticky;
+    top: 0px;
     background-color: black;
     align-items: center;
-    padding: 15PX;
     display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    
 }
-#name{
+.name{
     margin-left: 20px;
     font-weight: 700 ;
     font-size: larger;
     margin-top: 10px;
-    
+    margin-left: 50px;
     font-family:'Times New Roman', Times, serif;
     display: inline;
     
 }
 #options{
-    position: fixed;
+   
     right:25px;
     display: flex;
     width: 15%;
     justify-content: space-between;
     gap :15px;
+    margin-right: 55px;
     
 
 
@@ -51,7 +57,7 @@ a{
     font-size: 70px;
     font-weight: 500;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 140px;
+    padding-top: 100px;
    
 }
 .cont{
@@ -70,6 +76,13 @@ a{
     
 
 }
+.cont{
+    transition: transform 0.3s ease-in-out;
+}
+
+.cont:hover{
+    transform: scale(1.1);
+}
 .linkedin{
 background-color: #232222;
 display: flex;
@@ -87,9 +100,104 @@ font-size: 24px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
+.linkedin{
+    transition: transform 0.3s ease-in-out;
+}
+
+.linkedin:hover{
+    transform: scale(1.1);
+}
 .but{
     display: flex;
 }
 img{
     height: 30px;
+}
+.intro{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 120px;
+    border-bottom: 1px solid rgb(101, 101, 101);
+    width: 100%;
+}
+.pp{
+    margin-top:80px;
+    
+    height:400px
+}
+
+#heading{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+@media screen and (max-width:750px) {
+    #options{
+        display : none;
+        
+    }
+    .burger{
+        display: block !important;
+        
+    }
+}
+/* From Uiverse.io by Cevorob */ 
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: rgb(170, 170, 170);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
 }
