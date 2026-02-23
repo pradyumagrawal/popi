@@ -10,7 +10,7 @@ body{
 #head{
     height: 48px;
 
-    width: 100%;
+    width: 100vw;
     position: sticky;
     top: 0px;
     background-color: black;
@@ -139,6 +139,15 @@ img{
     .bji{
         display: block !important;
         
+    }
+    #head{
+        width: 100vw;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
     }
 }
 /* From Uiverse.io by Cevorob */ 
