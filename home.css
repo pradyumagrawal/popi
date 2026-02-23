@@ -136,7 +136,7 @@ img{
         display : none;
         
     }
-    .burger{
+    .bji{
         display: block !important;
         
     }
@@ -148,7 +148,7 @@ img{
   height: 30px;
   background: transparent;
   cursor: pointer;
-  display: none;
+  display: block;
 }
 
 .burger input {
@@ -200,4 +200,7 @@ img{
   transform: rotate(-45deg);
   top: 28px;
   left: 5px;
+}
+.bji{
+    display: none;
 }
