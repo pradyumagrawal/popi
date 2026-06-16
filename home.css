@@ -128,8 +128,8 @@ img{
 
 #heading{
     font-size: 50px;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 0px;
+    margin-left: 40px;
 }
 @media screen and (max-width:750px) {
     #options{
@@ -243,4 +243,14 @@ img{
     background-color: #000000;
     z-index: 1000;     
     
+}
+.content{
+    padding-left: 40px;
+    font-weight: 100;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+.split{
+    display: flex;
+    justify-content: space-around;
 }
